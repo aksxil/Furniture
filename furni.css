@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Voyage', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom, #4d695c, #000000);
+    background: linear-gradient(-235deg, #44775f, #33463d);
+}
+
+.navbar {
+    top: 0;
+    position: absolute;
+    padding: 15px 30px;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.navbar h1 {
+    font-weight: 100;
+    font-size: 3.5vw;
+}
+
+.navbar .sec {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+}
+
+.navbar .sec a {
+    position: relative;
+    font-weight: 100;
+    color: white;
+    text-decoration: none;
+    opacity: 0.5;
+    font-size: 1.5vw;
+}
+
+.navbar .sec a:hover {
+    opacity: 1;
+}
+
+.navbar .sec a::before {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: all ease-in-out 0.2s;
+}
+
+.navbar .sec a:hover::before {
+    width: 100%;
+}
+
+.navbar .sec2 {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .sec2 i {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.navbar .sec2 #bag {
+    padding: 12px;
+    background-color: #5e9b53;
+    border-radius: 50%;
+}
+
+.navbar .sec2 #bag:hover {
+    background-color: #44775f;
+}
+
+.center {
+
+    position: absolute;
+    width: 125%;
+    display: flex;
+    flex-shrink: 1;
+    left: -12%;
+
+    justify-content: space-between;
+}
+
+.center .box {
+    position: relative;
+    height: 33vw;
+    width: 21vw;
+
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+}
+
+.box img {
+    z-index: 4;
+    position: absolute;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    height: 33vw;
+    width: 21vw;
+    object-fit: cover;
+    animation: c 1s ease-in-out;
+}
+
+@keyframes c {
+    0% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}
+
+#pic::after {
+    z-index: 3;
+    position: absolute;
+    top: -7%;
+    left: -7%;
+    content: "";
+    height: 33vw;
+    width: 21vw;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border: 1.5px solid hsl(18.75deg 60.61% 74.12%);
+}
+
+.text {
+    color: white;
+    position: absolute;
+    z-index: 88;
+    left: 38%;
+    top: 20%;
+}
+
+.text h1 {
+    text-align: center;
+    line-height: .7;
+    font-size: 6.8vw;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.text #best {
+    font-family: shaloems;
+    color: #ebbfa7;
+    font-weight: 100;
+}
+
+#blur {
+    z-index: 15;
+    height: 21vw;
+    width: 21vw;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.157);
+    bottom: 10%;
+    right: 25%;
+    backdrop-filter: blur(17px);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 20px;
+    align-items: flex-start;
+    color: white;
+    padding: 10px;
+    font-family: voyage;
+}
+
+#blur button {
+    padding: 7px 27px;
+    font-family: voyage;
+    position: relative;
+    z-index: 99;
+    font-size: 1.7vw;
+    opacity: 0.7;
+}
+
+#blur button::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+#blur button:hover{
+    opacity: 1;
+}
+
+#blur h1 {
+    font-weight: 100;
+    font-size: 2vw;
+}
+
+#blur h2 {
+    font-weight: 100;
+    font-size: 1.2vw;
+    margin-top: -20px;
+}
+
+#blur #cir {
+    justify-content: space-between;
+    display: flex;
+    width: 80px;
+    height: 30px;
+
+}
+
+#blur #cir .cir {
+    height: 20px;
+    width: 20px;
+    background-color: #ebbfa7;
+    border-radius: 100px;
+}
+
+#blur #cir #f {
+    position: relative;
+    background-color: #7fe5b5;
+}
+
+#blur #cir #l {
+    background-color: #ffffff;
+}
+
+#blur #cir #f::after {
+    position: absolute;
+    left: -14%;
+    top: -10%;
+    content: "";
+    height: 21.5px;
+    width: 21.5px;
+    border-radius: 100px;
+    border: 2px solid #7fe5b5;
+}
+
+#blur .sec p {
+    font-family: gilroy;
+    font-size: 1.05vw;
+}
+
+.offer {
+    white-space: nowrap;
+    display: flex;
+    position: relative;
+    height: 60px;
+    width: 180px;
+
+    position: absolute;
+    right: 13%;
+    top: 16%;
+}
+
+.offer h3,
+.offer h1 {
+    font-weight: 100;
+    color: white;
+    white-space: nowrap;
+}
+
+.offer .round {
+    position: absolute;
+    height: 60px;
+    width: 35px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #44775f;
+}
+
+#right {
+    height: 80px;
+    right: 25%;
+    top: 38%;
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+}
+
+#left {
+    height: 80px;
+    left: 25%;
+    top: 47%;
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+}
+
+#ron {
+    height: 100px;
+    left: 18%;
+    bottom: 10%;
+    position: absolute;
+    z-index: 20;
+    animation-name: a;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes a {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+#infinite {
+    width: 100%;
+    white-space: nowrap;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0%;
+}
+
+#infinite h1 {
+    margin-left: -4px;
+
+    display: inline-block;
+    font-size: 3.5vw;
+    padding: 1px 10px;
+    font-family: voyage;
+    color: white;
+    animation: b 1s linear infinite;
+}
+
+@keyframes b {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#star {
+    height: 40px;
+    left: 18%;
+    top: 23%;
+    position: absolute;
+    z-index: 20;
+}
